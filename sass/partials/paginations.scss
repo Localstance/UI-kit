@@ -1,0 +1,68 @@
+.paginations-wrapper {
+  @include flex-alignment(flex, space-between, center, no-wrap);
+
+  .pagination-list {
+    @include flex-alignment(flex, space-between, center, no-wrap);
+
+    li { margin-right: 18px; }
+
+    a {
+      @include square-style(50px);
+      @include border(1px, solid, #d9dad9);
+      @include border-radius(3px);
+      @include font-rules($font-stack, 2em, #454c4d, auto, 500);
+      @include gradient(#ffffff, #ebeeef, #d9dcdd);
+    }
+
+    .selected-page,
+    .page:hover {
+      color: $white;
+      border: none;
+    }
+
+    .pager:hover {
+      @include bgChange(#cacfd2);
+    }
+
+  }
+
+  .pagination-green {
+
+    .selected-page { @include gradient(#10a64f, #23b961, #2bc26a); }
+
+    .page:hover {
+      @include bgChange(#27ae60);
+    }
+  }
+
+  .pagination-yellow{
+
+    .selected-page { @include gradient(#f1be00, #ffd209, #ffd910); }
+
+    .page:hover {
+      @include bgChange(#f1c40f);
+    }
+
+  }
+
+  .pagination-red{
+
+    .selected-page { @include gradient(#e53927, #f84c3a, #ff5442); }
+
+    .page:hover {
+      @include bgChange(#e74c3c);
+    }
+
+  }
+
+  .pagination-blue{
+
+    .selected-page { @include gradient(#1374b3, #2485c4, #2b8ccc); }
+
+    .page:hover {
+      @include bgChange(#2980b9);
+    }
+
+  }
+
+}

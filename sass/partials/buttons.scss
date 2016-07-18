@@ -1,0 +1,84 @@
+.btn-list {
+
+  @include flex-alignment(flex, space-between, center, wrap);
+
+  .btn {
+    @include border-radius(5px);
+
+    a {
+      @include border-radius(5px);
+      @include font-rules($font-stack, 3.6em, $white, initial, 500);
+      @include button-style(300px, 95px);
+      &:active { @include box-shadow; }
+      &:active:after { @include bg-noise(); }
+    }
+
+  }
+
+  .btn-green {
+    @extend .btn;
+    @include gradient(#10a64f, #23b961, #2bc26a);
+
+    a {
+      @include border(1px, solid, #158545);
+      border-bottom-width: 2px;
+    }
+
+    &:hover { @include button-hvr(#27ae60); }
+
+  }
+
+  .btn-yellow {
+
+    @extend .btn;
+    @include gradient(#f1be00, #ffd209, #ffd910);
+
+    a {
+      @include border(1px, solid, #c29e0c);
+      border-bottom-width: 2px;
+    }
+
+    &:hover { @include button-hvr(#f1c40f); }
+
+  }
+
+  .btn-red {
+    @extend .btn;
+    @include gradient(#e53927, #f84c3a, #ff5442);
+
+    a {
+      @include border(1px, solid, #a23226);
+      border-bottom-width: 2px;
+    }
+
+    &:hover { @include button-hvr(#e74c3c); }
+
+  }
+
+  .btn-blue {
+    @extend .btn;
+    @include gradient(#1374b3, #2485c4, #2b8ccc);
+
+    a {
+      @include border(1px, solid, #1b5b84);
+      border-bottom-width: 2px;
+    }
+
+    &:hover { @include button-hvr(#2980b9); }
+
+  }
+
+  .btn-dark-grey {
+    @extend .btn;
+    @include gradient(#31393a, #454d4e, #4c5455);
+
+    a {
+      @include border(1px, solid, #1b1b1b);
+      border-bottom-width: 2px;
+    }
+
+    &:hover { @include button-hvr(#454c4d); }
+
+  }
+
+}

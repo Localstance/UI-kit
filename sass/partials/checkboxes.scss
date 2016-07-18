@@ -1,0 +1,52 @@
+.checkbox-list {
+  @include flex-alignment(flex, flex-start, center, wrap);
+
+  .checkbox {
+    margin-right: 45px;
+    line-height: 39px;
+    text-align: center;
+  }
+
+  a {
+    @include square-style(39px, #e8ebec);
+    @include border(2px, solid, #c2c2c2);
+    @include border-radius(5px);
+
+    i {
+      display: none;
+      color: $white;
+      font-size: 2em;
+    }
+
+  }
+
+  a:hover {
+    @include border(1px, solid, transparent);
+    @include border-radius(5px);
+    text-decoration: none;
+    i { display: inline; }
+  }
+
+  a:active { opacity: .5; }
+
+  .checkbox-green {
+    a:hover { @include gradient(#10a64f, #23b961, #2bc26a); }
+  }
+
+  .checkbox-yellow{
+    a:hover { @include gradient(#f1be00, #ffd209, #ffd910); }
+  }
+
+  .checkbox-red{
+    a:hover { @include gradient(#e53927, #f84c3a, #ff5442); }
+  }
+
+  .checkbox-blue{
+    a:hover { @include gradient(#1374b3, #2485c4, #2b8ccc); }
+  }
+
+  .checkbox-dark-grey{
+    a:hover { @include gradient(#31393a, #454d4e, #4c5455); }
+  }
+
+}

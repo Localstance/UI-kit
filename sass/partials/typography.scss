@@ -1,0 +1,6 @@
+.component {
+  h1 {
+    @include font-rules($font-stack, 4em, #000000, 33px, 300, uppercase);
+    margin-bottom: 120px;
+  }
+}

@@ -1,0 +1,18 @@
+body { font-size: 10px; }
+
+#wrapper {
+  @include alignment;
+  width: 100%;
+  padding-top: 120px;
+}
+
+.component {
+  @include alignment;
+  max-width: $max-width;
+  margin-bottom: 90px;
+}
+
+.buttons,
+.checkboxes,
+.paginations,
+.tabs { @extend .component; }
